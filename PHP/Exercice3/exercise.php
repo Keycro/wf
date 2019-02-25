@@ -1,6 +1,6 @@
 <?php
 
-$input = [[1,2], [3,2], [5,6],[7,2]];
+$input;
 $brotherA = 0;
 $brotherB = 0;
 
