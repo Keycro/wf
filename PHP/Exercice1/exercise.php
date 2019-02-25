@@ -1,7 +1,7 @@
 <?php
 
-$booleanTrue = True;
-$booleanFalse = False;
+$booleanTrue = true;
+$booleanFalse = false;
 
 $int = 21;
 
