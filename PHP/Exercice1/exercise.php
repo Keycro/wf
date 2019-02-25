@@ -1,22 +1,28 @@
 <?php
 
-$booleanTrue;
-$booleanFalse;
+$booleanTrue = True;
+$booleanFalse = False;
 
-$int;
+$int = 21;
 
-$float;
+$float = 23.2;
 
-$integer;
+$integer = 21;
 
-$double;
+$double = 22.2;
 
-$string;
+$string = "Happy birthday";
 
-$array;
+$array = ['Hello', "World"];
 
-$doubleDimenssionArray;
+$doubleDimenssionArray = [
+    ["Karlo",21,"Bereldange"],
+    ["Adolfo", 35, "Boufort"]
+];
 
-$associativeArray;
+$associativeArray = [
+    "Luxembourg" => ["Bereldange", "Beggen"],
+    "Croatia" => ["Zagreb", "Rijeka"]
+];
 
-$null;
+$null= null;
