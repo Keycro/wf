@@ -16,7 +16,12 @@ class User
 
     public function getRoles()
     {
-        return $this->roles;
+        $labels = [Role::ROLE_USER];
+        foreach ($this->roles as $role) {
+            array_push($labels, $role->getLabel());
+        }
+
+        return array_unique($labels);
     }
 
     public function getPassword()
@@ -34,12 +39,21 @@ class User
         return $this->username;
     }
 
-    public function setRoles($roles)
+    public function setRoles(array $roles)
     {
-        $this->roles = $roles;
+        $this->roles = [];
+        foreach ($roles as $role) {
+            $this->addRole($role);
+        }
         return $this;
     }
-
+    public function addRole(Role $role)
+    {
+        if (!in_array($role, $this->roles)) {
+            array_push($this->roles,$role);
+        }
+        return $this;
+    }
     public function setPassword($password)
     {
         $this->password = $password;
